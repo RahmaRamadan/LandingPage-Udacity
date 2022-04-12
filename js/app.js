@@ -58,7 +58,7 @@ const navbar = () => {
     anchorEl.setAttribute("id", `section ${i}`);
 
     // give inner html content "name"
-    anchorEl.textContent = `Section ${i}`;
+    anchorEl.innerHTML = `Section ${i}`;
 
     // append anchor tag as a child for li element 
     newLi.appendChild(anchorEl);
