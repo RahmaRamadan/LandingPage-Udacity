@@ -39,7 +39,22 @@
 */
 
 // build the nav
-
+var navbar = function(){
+  var nav_header = document.querySelector('#navbar__list');  
+  const sections = document.querySelectorAll("section");
+  for(var i=1;i<=sections.length;i++){
+    var newLi = document.createElement("li");
+    var anchorEl = document.createElement("a");
+    anchorEl.classList.add("menu__link")
+    anchorEl.setAttribute("href", `#section${i}`);
+    anchorEl.setAttribute("id", `#section ${i}`);
+    anchorEl.removeAttribute("width");
+    anchorEl.textContent = `Section ${i}`
+    newLi.appendChild(anchorEl);
+    nav_header.appendChild(newLi);
+  }
+}
+navbar();
 // Add class 'active' to section when near top of viewport
 
 
