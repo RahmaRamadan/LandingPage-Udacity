@@ -85,6 +85,10 @@ function addActiveClass() {
   if (scrollY - sections[i].offsetHeight < sections[i].offsetTop) {
     sections[i].classList.add("your-active-class");
   }
+  // if top of the page remove active class
+  if (window.scrollY < 400){
+    sections.forEach((section) => section.classList.remove("your-active-class"));
+  }
 }
 
 // call active class function to fire actions
